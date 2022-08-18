@@ -201,7 +201,7 @@ GameObject:
   m_Layer: 0
   m_Name: mazzle
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -213,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216167519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.525, y: 0, z: 0}
+  m_LocalPosition: {x: 0.525, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 9129917566354725522, guid: aa9ea0e3d376c3846a70927ae2967554, type: 3}
   _mazzle: {fileID: 216167520}
-  _effect: {fileID: 3745009717355247144, guid: 8716ddc2d18e7724caac0cdf4c4913fb, type: 3}
+  _effect: {fileID: 1860276845}
 --- !u!4 &419360122
 Transform:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419360117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.24, y: -0.44, z: 0}
+  m_LocalPosition: {x: -3.24, y: -3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -556,6 +556,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1860276845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3745009717355247144, guid: 8716ddc2d18e7724caac0cdf4c4913fb, type: 3}
+  m_PrefabInstance: {fileID: 60139895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8024767316539582572
 PrefabInstance:
   m_ObjectHideFlags: 0
