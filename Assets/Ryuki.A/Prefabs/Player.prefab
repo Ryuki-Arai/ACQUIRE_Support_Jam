@@ -83,7 +83,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   _lifeImages: []
-  _speed: 2
 --- !u!212 &9968224109759625
 SpriteRenderer:
   m_ObjectHideFlags: 0

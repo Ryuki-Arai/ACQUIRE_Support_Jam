@@ -19,7 +19,7 @@ public class PlayerStatus : MonoBehaviour
     //Rigidbody2D _rbody;
 
     //float _vx = 0;
-    
+
     // ここまで
 
     void Start()
@@ -35,17 +35,17 @@ public class PlayerStatus : MonoBehaviour
     //void Update()
     //{
     //    _vx = 0;
-        
+
 
     //    if (Input.GetKey("right")) // 右キーが押されたら
     //    {
     //        _vx = _speed; // 右に進む移動量を入れる
-            
+
     //    }
     //    if (Input.GetKey("left")) // 左キーが押されたら
     //    {
     //        _vx = -_speed; // 左に進む移動量を入れる
-            
+
     //    }
     //}
 
