@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9968224109759629}
   - component: {fileID: 9968224109759624}
   - component: {fileID: 9968224109759626}
+  - component: {fileID: 1981449948407079160}
   - component: {fileID: 9968224109759625}
   - component: {fileID: 9968224109759622}
   - component: {fileID: 9968224109759623}
@@ -67,8 +68,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 9129917566354725522, guid: aa9ea0e3d376c3846a70927ae2967554, type: 3}
-  _mazzle: {fileID: 9968224443962769}
-  _effect: {fileID: 3736747935139479214}
+  _mazzleR: {fileID: 9968224443962769}
+  _mazzleL: {fileID: 0}
+  _effectR: {fileID: 3736747935139479214}
+  _effectL: {fileID: 0}
 --- !u!114 &9968224109759626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +86,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCount: 0
   _lifeImages: []
+--- !u!114 &1981449948407079160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9968224109759620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c13603829860e48a8c8e062a14db93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shurikentext: {fileID: 0}
+  _kunaitext: {fileID: 0}
 --- !u!212 &9968224109759625
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -182,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9968224443962769}
   m_Layer: 0
-  m_Name: mazzle
+  m_Name: mazzleR
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -212,7 +229,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3745009717355247144, guid: 8716ddc2d18e7724caac0cdf4c4913fb, type: 3}
       propertyPath: m_Name
-      value: Effect
+      value: EffectR
       objectReference: {fileID: 0}
     - target: {fileID: 3745009717355247144, guid: 8716ddc2d18e7724caac0cdf4c4913fb, type: 3}
       propertyPath: m_IsActive
