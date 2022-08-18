@@ -9,14 +9,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField, Tooltip("発射する弾")] GameObject _bullet;
     [SerializeField, Tooltip("発射位置")] Transform _mazzle;
     [SerializeField, Tooltip("斬撃エフェクト")] GameObject _effect;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        _effect.SetActive(false);
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         _effect.SetActive(Input.GetMouseButton(0));

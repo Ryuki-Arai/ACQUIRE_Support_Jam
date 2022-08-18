@@ -11,22 +11,10 @@ public class MouseControler : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            _mouseL.color = _colorT;
-        }
-        else
-        {
-            _mouseL.color = _colorF;
-        }
+        if (Input.GetMouseButton(0))  _mouseL.color = _colorT;
+        else _mouseL.color = _colorF;
 
-        if (Input.GetMouseButton(1))
-        {
-            _mouseR.color = _colorT;
-        }
-        else
-        {
-            _mouseR.color = _colorF;
-        }
+        if (Input.GetMouseButton(1)) _mouseR.color = _colorT;
+        else _mouseR.color = _colorF;
     }
 }
