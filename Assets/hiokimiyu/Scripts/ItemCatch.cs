@@ -14,28 +14,46 @@ public class ItemCatch : MonoBehaviour
     int _shuriken;
     void Start()
     {
-        _shurikentext.text = "0";
-        _kunaitext.text = "0";
+        Kunai = 0;
+        Shuriken = 0;
+        _kunaitext.text = Kunai.ToString();
+        _shurikentext.text = Shuriken.ToString();
     }
-
-    void Update()
+    public int Kunai
     {
-        
+        get
+        {
+            return _kunai;
+        }
+        set
+        {
+            _kunai = value;
+        }
     }
-
+    public int Shuriken
+    {
+        get
+        {
+            return _shuriken;
+        }
+        set
+        {
+            _shuriken = value;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "kunai" && _kunai < 5)
+        if(collision.tag == "kunai" && Kunai < 5)
         {
-            _kunai++;
+            Kunai++;
             Destroy(collision.gameObject);
-            _kunaitext.text = _kunai.ToString();
+            _kunaitext.text = Kunai.ToString();
         }
-        if(collision.tag == "shuriken" && _shuriken < 5)
+        if(collision.tag == "shuriken" && Shuriken < 5)
         {
-            _shuriken++;
+            Shuriken++;
             Destroy(collision.gameObject);
-            _shurikentext.text = _shuriken.ToString();
+            _shurikentext.text = Shuriken.ToString();
         }
     }
 }
