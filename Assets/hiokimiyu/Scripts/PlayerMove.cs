@@ -7,9 +7,9 @@ public class PlayerMove : MonoBehaviour
     /// <summary>移動スピード</summary>
     [SerializeField] float _speed = 5f;
     /// <summary> ジャンプスピード</summary>
-    [SerializeField] float _jump = 7f;
+    [SerializeField] float _jump = 20f;
     /// <summary>ジャンプボタンを離した時の上昇減衰</summary>
-    [SerializeField] float _gravityjump = .8f;
+    [SerializeField] float _gravityjump = 0.8f;
     float _h;
     /// <summary> 接地判定</summary>
     bool _isGround = default;
