@@ -28,11 +28,13 @@ public class ItemCatch : MonoBehaviour
         if(collision.tag == "kunai" && _kunai < 5)
         {
             _kunai++;
+            Destroy(collision.gameObject);
             _kunaitext.text = _kunai.ToString();
         }
         if(collision.tag == "shuriken" && _shuriken < 5)
         {
             _shuriken++;
+            Destroy(collision.gameObject);
             _shurikentext.text = _shuriken.ToString();
         }
     }
