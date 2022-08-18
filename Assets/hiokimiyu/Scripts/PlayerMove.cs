@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     float _h;
     /// <summary> ê⁄ínîªíË</summary>
     bool _isGround = default;
-    bool _flipX = default;
+    bool _flipX = true;
     Rigidbody2D _rb;
     void Start()
     {
@@ -51,11 +51,11 @@ public class PlayerMove : MonoBehaviour
     }
     void FlipX(float horizontal)
     {
-        if(horizontal < 0)
+        if(horizontal > 0)
         {
             this.transform.localScale = new Vector3(Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
         }
-        else if(horizontal > 0)
+        else if(horizontal < 0)
         {
             this.transform.localScale = new Vector3(-1 * Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
         }
