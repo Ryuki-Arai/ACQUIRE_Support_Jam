@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 323096879}
   m_Layer: 0
   m_Name: TestEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,6 +566,7 @@ MonoBehaviour:
   - {fileID: 1138746909}
   - {fileID: 1882403511}
   - {fileID: 1446434147}
+  _speed: 2
 --- !u!61 &858407808
 BoxCollider2D:
   m_ObjectHideFlags: 0
