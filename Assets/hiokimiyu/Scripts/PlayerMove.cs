@@ -40,7 +40,7 @@ public class PlayerMove : MonoBehaviour
         {
             //_rb.AddForce(Vector2.up * _jump, ForceMode2D.Impulse);
             velocity.y = _jump;
-            _isGround = false;
+            //_isGround = false;
         }
         else if (!Input.GetKey(KeyCode.Space) && velocity.y > 0)
         {

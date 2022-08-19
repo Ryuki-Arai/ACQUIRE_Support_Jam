@@ -29,10 +29,6 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         _effect.SetActive(Input.GetMouseButton(0));
-        if (Input.GetButtonDown("Fire1"))
-        {
-            _mode = _mode == Mode.shuriken ? Mode.kunai : Mode.shuriken;
-        }
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Ža");
@@ -46,6 +42,10 @@ public class PlayerAttack : MonoBehaviour
         {
             Instantiate(_shuriken, _mazzle.position, Quaternion.identity);
             _ic.Shuriken--;
+        }
+        if (Input.GetMouseButtonDown(2))
+        {
+            _mode = _mode == Mode.shuriken ? Mode.kunai : Mode.shuriken;
         }
     }
 }
