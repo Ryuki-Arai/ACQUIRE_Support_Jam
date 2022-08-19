@@ -31,6 +31,7 @@ public class PlayerAttack : MonoBehaviour
         _sr = GetComponent<SpriteRenderer>();
         _ic.GetComponent<ItemCatch>();
         _mode = Mode.shuriken;
+        _ic.ModeChange();
         _anim = GetComponent<Animator>();
     }
     void Update()
@@ -43,12 +44,14 @@ public class PlayerAttack : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1) && _ic.Kunai > 0 && _mode == Mode.kunai)
         {
+            _anim.SetTrigger("Kunai");
             Instantiate(_kunai, _mazzle.position,Quaternion.identity);
             _ic.Kunai--;
             
         }
         else if(Input.GetMouseButtonDown(1) && _ic.Shuriken > 0 && _mode == Mode.shuriken)
         {
+            if (_anim) _anim.SetTrigger("Shuriken");
             Instantiate(_shuriken, _mazzle.position, Quaternion.identity);
             _ic.Shuriken--;
             
@@ -56,18 +59,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(2))
         {
             _mode = _mode == Mode.shuriken ? Mode.kunai : Mode.shuriken;
-            _ic.Shuriken += 0;
-            _ic.Kunai += 0;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (_anim)
-        {
-            _anim.SetBool("Shuriken", Input.GetMouseButtonDown(0));
-            _anim.SetBool("Kunai", Input.GetMouseButtonDown(1) && _mode == Mode.kunai);
-            _anim.SetBool("Slash", Input.GetMouseButtonDown(1) && _mode == Mode.shuriken);
+            _ic.ModeChange();
         }
     }
 }

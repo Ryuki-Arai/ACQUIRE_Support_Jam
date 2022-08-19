@@ -15,25 +15,33 @@ public class PlayerMove : MonoBehaviour
     bool _isGround = default;
     bool _flipX = true;
     Rigidbody2D _rb;
+    Animator _anim;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        _h = Input.GetAxis("Horizontal");
-        Vector2 velocity = _rb.velocity;
+        //_h = Input.GetAxis("Horizontal");
+        //Vector2 velocity = _rb.velocity;
 
-        if(Input.GetButton("Horizontal"))
-        {
-            //_rb.velocity = new Vector2(_speed * Time.deltaTime, _rb.velocity.y);
-            transform.Translate(_speed * _h * Time.deltaTime, 0, 0);
-        }
+        //if(Input.GetButton("Horizontal"))
+        //{
+        //    //_rb.velocity = new Vector2(_speed * Time.deltaTime, _rb.velocity.y);
+        //    transform.Translate(_speed * _h * Time.deltaTime, 0, 0);
+
+        //}
+        _h = Input.GetAxisRaw("Horizontal");
+        Vector2 dir = new Vector2(_h, 0);
+        var velocity = dir.normalized * _speed;
+        velocity.y = _rb.velocity.y;
+        _rb.velocity = velocity;
 
         if (_flipX)
         {
-            FlipX(_h);
+            FlipX(this._h);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && _isGround)
@@ -49,6 +57,18 @@ public class PlayerMove : MonoBehaviour
 
         _rb.velocity = velocity;
     }
+
+    private void LateUpdate()
+    {
+        if (_anim)
+        {
+            Vector2 walkSpeed = _rb.velocity;
+            walkSpeed.y = 0;
+            _anim.SetFloat("Walk", Mathf.Abs(walkSpeed.magnitude));
+            _anim.SetBool("Jump", !_isGround);
+        }
+    }
+
     void FlipX(float horizontal)
     {
         if(horizontal > 0)

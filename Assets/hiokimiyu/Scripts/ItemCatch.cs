@@ -33,8 +33,6 @@ public class ItemCatch : MonoBehaviour
         {
             _kunai = value;
             _kunaitext.text = Kunai.ToString();
-            if(_pa.Mode == Mode.kunai)_kunaitext.color = Color.red;
-            else _kunaitext.color = Color.white;
         }
     }
     public int Shuriken
@@ -47,10 +45,24 @@ public class ItemCatch : MonoBehaviour
         {
             _shuriken = value;
             _shurikentext.text = Shuriken.ToString();
-            if (_pa.Mode == Mode.shuriken) _shurikentext.color = Color.red;
-            else _shurikentext.color = Color.white;
         }
     }
+
+    public void ModeChange()
+    {
+        if (_pa.Mode == Mode.shuriken)
+        {
+            _kunaitext.color = Color.white;
+            _shurikentext.color = Color.red;
+        }
+        
+        else
+        {
+            _kunaitext.color = Color.red;
+            _shurikentext.color = Color.white;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "kunai" && Kunai < 5)
