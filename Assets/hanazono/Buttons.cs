@@ -20,6 +20,6 @@ public class Buttons : MonoBehaviour
 
     public void PlayButton()
     {
-        FadeManager.Instance.LoadScene("PlayScene", 1.0f);
+        FadeManager.Instance.LoadScene("arasuji", 3.0f);
     }
 }

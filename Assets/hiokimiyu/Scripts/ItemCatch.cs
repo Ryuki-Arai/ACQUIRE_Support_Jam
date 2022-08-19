@@ -10,12 +10,14 @@ public class ItemCatch : MonoBehaviour
     [SerializeField] TextMeshProUGUI _kunaitext;
     [SerializeField,Tooltip("手裏剣の初期数")] int _shiriInit;
     [SerializeField,Tooltip("クナイの初期数")] int _kunaiInit;
+    PlayerAttack _pa;
     /// <summary>クナイの現在の数</summary>
     int _kunai;
     /// <summary>手裏剣の現在の数</summary>
     int _shuriken;
     void Start()
     {
+        _pa = GetComponent<PlayerAttack>();
         Kunai = _kunaiInit;
         Shuriken = _shiriInit;
         _kunaitext.text = Kunai.ToString();
@@ -31,6 +33,8 @@ public class ItemCatch : MonoBehaviour
         {
             _kunai = value;
             _kunaitext.text = Kunai.ToString();
+            if(_pa.Mode == Mode.kunai)_kunaitext.color = Color.red;
+            else _kunaitext.color = Color.white;
         }
     }
     public int Shuriken
@@ -43,6 +47,8 @@ public class ItemCatch : MonoBehaviour
         {
             _shuriken = value;
             _shurikentext.text = Shuriken.ToString();
+            if (_pa.Mode == Mode.shuriken) _shurikentext.color = Color.red;
+            else _shurikentext.color = Color.white;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
