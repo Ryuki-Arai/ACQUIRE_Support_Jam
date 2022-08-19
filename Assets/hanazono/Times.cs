@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ public class Times : MonoBehaviour
     public float countdown = 10.0f;
 
     //時間を表示するText型の変数
-    public Text timeText;
+    public TextMeshProUGUI timeText;
 
     //ポーズしているかどうか
     private bool isPose = false;
@@ -18,31 +19,31 @@ public class Times : MonoBehaviour
     void Update()
     {
         //クリックされたとき
-        if (Input.GetMouseButtonDown(0))
-        {
-            //ポーズ中にクリックされたとき
-            if (isPose)
-            {
-                //ポーズ状態を解除する
-                isPose = false;
-            }
-            //進行中にクリックされたとき
-            else
-            {
-                //ポーズ状態にする
-                isPose = true;
-            }
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    //ポーズ中にクリックされたとき
+        //    if (isPose)
+        //    {
+        //        //ポーズ状態を解除する
+        //        isPose = false;
+        //    }
+        //    //進行中にクリックされたとき
+        //    else
+        //    {
+        //        //ポーズ状態にする
+        //        isPose = true;
+        //    }
+        //}
 
-        //ポーズ中かどうか
-        if (isPose)
-        {
-            //ポーズ中であることを表示
-            timeText.text = "ポーズ中";
+        ////ポーズ中かどうか
+        //if (isPose)
+        //{
+        //    //ポーズ中であることを表示
+        //    timeText.text = "ポーズ中";
 
-            //カウントダウンしない
-            return;
-        }
+        //    //カウントダウンしない
+        //    return;
+        //}
 
         //時間をカウントする
         countdown -= Time.deltaTime;

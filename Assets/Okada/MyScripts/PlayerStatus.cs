@@ -13,6 +13,10 @@ public class PlayerStatus : MonoBehaviour
 
     [SerializeField, Header("ライフ")] Image[] _lifeImages;
 
+    [SerializeField, Tooltip("ゲームオーバーシーン")] string _gameScene;
+
+    bool _isDead;
+
     /// 後で消す
     //[SerializeField] float _speed = 2; // スピード：Inspectorで指定
 
@@ -27,7 +31,7 @@ public class PlayerStatus : MonoBehaviour
         //_rbody = GetComponent<Rigidbody2D>(); // ステータスだけのスクリプトなので、後で消す
 
         hitCount = HitCount.hit0;
-
+        _isDead = false;
         //_rbody.constraints = RigidbodyConstraints2D.FreezeRotation; // ステータスだけのスクリプトなので、後で消す
     }
 
@@ -62,26 +66,31 @@ public class PlayerStatus : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         // 1回目
-        if (col.gameObject.tag == "Enemy" && hitCount == HitCount.hit0)
+        if (col.gameObject.tag == "Enemy" && hitCount == HitCount.hit0 && !_isDead)
         {
             _lifeImages[0].enabled = false;
 
             hitCount = HitCount.hit1;
         }
         // 2回目
-        else if (col.gameObject.tag == "Enemy" && hitCount == HitCount.hit1)
+        else if (col.gameObject.tag == "Enemy" && hitCount == HitCount.hit1 && !_isDead)
         {
             _lifeImages[1].enabled = false;
 
             hitCount = HitCount.hit2;
         }
         // 3回目
-        else if (col.gameObject.tag == "Enemy" && hitCount == HitCount.hit2)
+        else if (col.gameObject.tag == "Enemy" && hitCount == HitCount.hit2 && !_isDead)
         {
             _lifeImages[2].enabled = false;
 
             hitCount = HitCount.hit0;
 
+            _isDead = true;
+        }
+        else if (col.gameObject.tag == "Enemy" && hitCount == HitCount.hit0 && _isDead)
+        {
+            FadeManager.Instance.LoadScene(_gameScene, 3.0f);
         }
     }
 

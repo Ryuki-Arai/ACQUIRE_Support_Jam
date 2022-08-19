@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
+    [SerializeField, Tooltip("ÉQÅ[ÉÄÉVÅ[Éìñº")] string _gameScene;
+
     public void TitleButton()
     {
         FadeManager.Instance.LoadScene("TitleScene", 1.0f);
@@ -32,6 +34,6 @@ public class Buttons : MonoBehaviour
     }
     public void PlayButton()
     {
-        FadeManager.Instance.LoadScene("PlayScene", 3.0f);
+        FadeManager.Instance.LoadScene(_gameScene, 3.0f);
     }
 }
