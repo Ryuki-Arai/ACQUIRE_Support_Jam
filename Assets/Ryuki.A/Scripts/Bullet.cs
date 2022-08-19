@@ -12,8 +12,17 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         _rb2d = GetComponent<Rigidbody2D>();
-        var h = Input.GetAxis("Horizontal");
-        vec = GameObject.FindGameObjectWithTag("Player").transform.localScale.x > 0 ? 1 : -1;
+        SpriteRenderer _sr = GetComponent<SpriteRenderer>();
+        if(GameObject.FindGameObjectWithTag("Player").transform.localScale.x > 0)
+        {
+            vec = 1;
+            _sr.flipX = false;
+        }
+        else
+        {
+            vec = -1;
+            _sr.flipX = true;
+        }
         _rb2d.AddForce(Vector2.right * _power * vec, ForceMode2D.Impulse);
     }
 
