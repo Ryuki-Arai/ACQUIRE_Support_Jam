@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shurikentext: {fileID: 0}
   _kunaitext: {fileID: 0}
+  _shiriInit: 0
+  _kunaiInit: 0
 --- !u!212 &9968224109759625
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -202,9 +204,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.57}
+  m_Offset: {x: 0, y: -1}
   serializedVersion: 2
-  m_Radius: 0.52
+  m_Radius: 0.1
 --- !u!1 &9968224443962798
 GameObject:
   m_ObjectHideFlags: 0

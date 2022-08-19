@@ -1065,6 +1065,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1925064178744922214, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925064178744922214, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
+      propertyPath: m_Offset.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1981449948407079160, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
       propertyPath: _kunaitext
       value: 
