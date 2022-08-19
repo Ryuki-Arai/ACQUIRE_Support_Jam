@@ -625,6 +625,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shurikentext: {fileID: 806614702}
   _kunaitext: {fileID: 1547194553}
+  _shiriInit: 0
+  _kunaiInit: 0
 --- !u!114 &467782181 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1981449948407079160, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
