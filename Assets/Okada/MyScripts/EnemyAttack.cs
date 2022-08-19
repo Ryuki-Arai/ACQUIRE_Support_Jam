@@ -16,28 +16,29 @@ public class EnemyAttack : MonoBehaviour
     void Start()
     {
         
-
         _animator = GetComponent<Animator>();
 
         _animator2 = GetComponent<Animator>();
 
-        InvokeRepeating("AttackMotion", _spawnTime, _spawnTime);
+       
     }
 
     
     void Update()
     {
-        
+        InvokeRepeating("AttackMotion", 1.5f, _spawnTime);
     }
 
     void AttackMotion()
     {
         _zangekiObject.SetActive(true);
 
+        _animator2.Play("Zangeki(Boss)");
+
         _animator.SetBool("Attack", true);
 
-
-        _animator2.Play("Zangeki(Boss)");
+        
+        
     }
 
     
