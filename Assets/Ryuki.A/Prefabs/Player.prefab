@@ -68,10 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 9129917566354725522, guid: aa9ea0e3d376c3846a70927ae2967554, type: 3}
-  _mazzleR: {fileID: 9968224443962769}
-  _mazzleL: {fileID: 0}
-  _effectR: {fileID: 3736747935139479214}
-  _effectL: {fileID: 0}
+  _mazzle: {fileID: 0}
+  _effect: {fileID: 0}
+  _ic: {fileID: 0}
 --- !u!114 &9968224109759626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,11 +280,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8716ddc2d18e7724caac0cdf4c4913fb, type: 3}
---- !u!1 &3736747935139479214 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3745009717355247144, guid: 8716ddc2d18e7724caac0cdf4c4913fb, type: 3}
-  m_PrefabInstance: {fileID: 9968224266471558}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4944521511519046633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4953135033766314863, guid: 8716ddc2d18e7724caac0cdf4c4913fb, type: 3}
