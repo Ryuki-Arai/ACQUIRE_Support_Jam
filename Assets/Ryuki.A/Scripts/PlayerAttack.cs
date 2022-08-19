@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
     }
     void Update()
     {
-        _effect.SetActive(Input.GetMouseButton(0));
+        if(_effect)_effect.SetActive(Input.GetMouseButton(0));
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Ža");

@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/hanazono/TitleScene.unity
     guid: 31cb1b0a26a615d4eba25e9879a7abd7
   - enabled: 1
-    path: Assets/hanazono/PlayScene.unity
-    guid: e78d6cf9d6dd5324da7bdffebd8664b4
+    path: Assets/hanazono/arasuji.unity
+    guid: d1e7fa2b5dcdc514c964265b92b5d335
+  - enabled: 1
+    path: Assets/Ryuki.A/Scene/MainGame.unity
+    guid: 3181eca7e77764c4cb9e91e640cb125c
   - enabled: 1
     path: Assets/hanazono/GameClearScene.unity
     guid: d3114cc9f97672141a34343d7e0c0149
@@ -18,12 +21,6 @@ EditorBuildSettings:
     path: Assets/hanazono/GameOverScene.unity
     guid: eed4c37fb3f29e2428eb3ec3bd9df94a
   - enabled: 1
-    path: Assets/hanazono/arasuji.unity
-    guid: d1e7fa2b5dcdc514c964265b92b5d335
-  - enabled: 1
     path: Assets/hanazono/StaffRoll.unity
     guid: 88002c6f2cb5ada4db00b7643f5f5fe6
-  - enabled: 1
-    path: Assets/Ryuki.A/Scene/MainGame.unity
-    guid: 3181eca7e77764c4cb9e91e640cb125c
   m_configObjects: {}

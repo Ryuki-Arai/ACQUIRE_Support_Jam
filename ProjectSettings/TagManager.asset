@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - kunai
   - shuriken
+  - Katana
   layers:
   - Default
   - TransparentFX

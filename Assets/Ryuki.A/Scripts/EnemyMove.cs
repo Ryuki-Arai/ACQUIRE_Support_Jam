@@ -29,7 +29,7 @@ public class EnemyMove : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var tag = collision.gameObject.tag;
-        if (tag == "kunai" || tag == "shuriken")
+        if (tag == "kunai" || tag == "shuriken" || tag == "Katana")
         {
             Destroy(gameObject);
         }

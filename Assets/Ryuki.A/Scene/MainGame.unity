@@ -1624,6 +1624,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1132700795748912674, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132700795748912674, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1981449948407079160, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
       propertyPath: _kunaitext
       value: 
@@ -1632,7 +1640,12 @@ PrefabInstance:
       propertyPath: _shurikentext
       value: 
       objectReference: {fileID: 1261537386}
-    m_RemovedComponents: []
+    - target: {fileID: 3736747935139479214, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
+      propertyPath: m_TagString
+      value: Katana
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1132700795748912674, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
 --- !u!1001 &3909806436986170335
 PrefabInstance:
