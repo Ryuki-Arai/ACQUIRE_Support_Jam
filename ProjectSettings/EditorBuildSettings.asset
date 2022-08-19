@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/hanazono/GameOverScene.unity
     guid: eed4c37fb3f29e2428eb3ec3bd9df94a
+  - enabled: 1
+    path: Assets/hanazono/arasuji.unity
+    guid: d1e7fa2b5dcdc514c964265b92b5d335
   m_configObjects: {}

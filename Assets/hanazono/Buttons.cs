@@ -18,8 +18,12 @@ public class Buttons : MonoBehaviour
 #endif
     }
 
-    public void PlayButton()
+    public void arasujiButton()
     {
         FadeManager.Instance.LoadScene("arasuji", 3.0f);
+    }
+    public void PlayButton()
+    {
+        FadeManager.Instance.LoadScene("PlayScene", 3.0f);
     }
 }
