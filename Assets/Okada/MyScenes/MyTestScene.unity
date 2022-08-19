@@ -359,7 +359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9968224109759620, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9968224109759625, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
       propertyPath: m_FlipX
@@ -462,6 +462,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shurikentext: {fileID: 1735172388}
   _kunaitext: {fileID: 511296310}
+  _shiriInit: 0
+  _kunaiInit: 0
 --- !u!95 &739038348
 Animator:
   serializedVersion: 4
@@ -495,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9968224109759620, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9968224109759626, guid: 9f1ec04dae6ee3f418c7174b90bd9472, type: 3}
       propertyPath: m_Enabled
@@ -1007,6 +1009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shurikentext: {fileID: 1735172388}
   _kunaitext: {fileID: 511296310}
+  _shiriInit: 0
+  _kunaiInit: 0
 --- !u!114 &1735172388 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 947604474121306115, guid: 26606b8769888d8489dba917487c6d0a, type: 3}
