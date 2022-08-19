@@ -30,6 +30,7 @@ public class ItemCatch : MonoBehaviour
         set
         {
             _kunai = value;
+            _kunaitext.text = Kunai.ToString();
         }
     }
     public int Shuriken
@@ -41,6 +42,7 @@ public class ItemCatch : MonoBehaviour
         set
         {
             _shuriken = value;
+            _shurikentext.text = Shuriken.ToString();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
