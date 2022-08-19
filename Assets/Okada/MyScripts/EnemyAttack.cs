@@ -26,7 +26,7 @@ public class EnemyAttack : MonoBehaviour
     
     void Update()
     {
-        InvokeRepeating("AttackMotion", 1.5f, _spawnTime);
+        InvokeRepeating("AttackMotion", 0.5f, _spawnTime);
     }
 
     void AttackMotion()
@@ -37,8 +37,16 @@ public class EnemyAttack : MonoBehaviour
 
         _animator.SetBool("Attack", true);
 
-        
-        
+
+        StartCoroutine("Back");
+    }
+
+    IEnumerator Back()
+    {
+
+        yield return new WaitForSeconds(1);
+
+        _animator.SetBool("Attack", false);
     }
 
     
