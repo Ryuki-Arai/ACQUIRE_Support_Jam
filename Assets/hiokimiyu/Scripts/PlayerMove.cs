@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     /// <summary>移動スピード</summary>
     [SerializeField] float _speed = 5f;
     /// <summary> ジャンプスピード</summary>
-    [SerializeField] float _jump = 20f;
+    [SerializeField] float _jump = 10f;
     /// <summary>ジャンプボタンを離した時の上昇減衰</summary>
     [SerializeField] float _gravityjump = 0.8f;
     float _h;
@@ -60,18 +60,34 @@ public class PlayerMove : MonoBehaviour
             this.transform.localScale = new Vector3(-1 * Mathf.Abs(this.transform.localScale.x), this.transform.localScale.y, this.transform.localScale.z);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            _isGround = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            _isGround = false;
+        }
+    }
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ground")
         {
             _isGround = true;
         }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
+    }*/
+    /*private void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ground")
         {
             _isGround = false;
         }
-    }
+    }*/
 }
