@@ -224,7 +224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &224964365
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1502,7 +1502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1500818000076235434, guid: 92b85eb83c8dccb47a61aa1c226a0af8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.07
+      value: -2.58
       objectReference: {fileID: 0}
     - target: {fileID: 1500818000076235434, guid: 92b85eb83c8dccb47a61aa1c226a0af8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1555,7 +1555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8296300553066793652, guid: b2502967b615d964298cec49fa8a5228, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.07
+      value: -3.53
       objectReference: {fileID: 0}
     - target: {fileID: 8296300553066793652, guid: b2502967b615d964298cec49fa8a5228, type: 3}
       propertyPath: m_LocalPosition.z
