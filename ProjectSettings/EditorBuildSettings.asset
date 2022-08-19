@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/hanazono/TitleScene.unity
+    guid: 31cb1b0a26a615d4eba25e9879a7abd7
+  - enabled: 1
+    path: Assets/hanazono/PlayScene.unity
+    guid: e78d6cf9d6dd5324da7bdffebd8664b4
+  - enabled: 1
+    path: Assets/hanazono/GameClearScene.unity
+    guid: d3114cc9f97672141a34343d7e0c0149
+  - enabled: 1
+    path: Assets/hanazono/GameOverScene.unity
+    guid: eed4c37fb3f29e2428eb3ec3bd9df94a
   m_configObjects: {}
