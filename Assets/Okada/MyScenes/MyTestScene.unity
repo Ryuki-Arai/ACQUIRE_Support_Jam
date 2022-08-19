@@ -1189,5 +1189,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatusCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 947604475638200738, guid: 26606b8769888d8489dba917487c6d0a, type: 3}
+      propertyPath: m_text
+      value: "\u3089\u3044\u3075"
+      objectReference: {fileID: 0}
+    - target: {fileID: 947604475638200738, guid: 26606b8769888d8489dba917487c6d0a, type: 3}
+      propertyPath: m_fontSize
+      value: 60.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 947604475638200738, guid: 26606b8769888d8489dba917487c6d0a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 065bd9cbe6e3e3142afafe0ddc066094, type: 2}
+    - target: {fileID: 947604475638200738, guid: 26606b8769888d8489dba917487c6d0a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 947604475638200738, guid: 26606b8769888d8489dba917487c6d0a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -360084974873391969, guid: 065bd9cbe6e3e3142afafe0ddc066094, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26606b8769888d8489dba917487c6d0a, type: 3}
