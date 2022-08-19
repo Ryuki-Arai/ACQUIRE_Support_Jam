@@ -6,8 +6,8 @@ using TMPro;
 
 public class ItemCatch : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _shurikentext;
-    [SerializeField] TextMeshProUGUI _kunaitext;
+    [SerializeField]  TextMeshProUGUI  _shurikentext;
+    [SerializeField]  TextMeshProUGUI _kunaitext;
     [SerializeField,Tooltip("è— Œ•‚Ì‰Šú”")] int _shiriInit;
     [SerializeField,Tooltip("ƒNƒiƒC‚Ì‰Šú”")] int _kunaiInit;
     PlayerAttack _pa;
@@ -17,6 +17,7 @@ public class ItemCatch : MonoBehaviour
     int _shuriken;
     void Start()
     {
+        ItemSingleton.Instance.SetItem(this);
         _pa = GetComponent<PlayerAttack>();
         Kunai = _kunaiInit;
         Shuriken = _shiriInit;
