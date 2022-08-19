@@ -8,14 +8,16 @@ public class ItemCatch : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _shurikentext;
     [SerializeField] TextMeshProUGUI _kunaitext;
+    [SerializeField,Tooltip("手裏剣の初期数")] int _shiriInit;
+    [SerializeField,Tooltip("クナイの初期数")] int _kunaiInit;
     /// <summary>クナイの現在の数</summary>
     int _kunai;
     /// <summary>手裏剣の現在の数</summary>
     int _shuriken;
     void Start()
     {
-        Kunai = 0;
-        Shuriken = 0;
+        Kunai = _kunaiInit;
+        Shuriken = _shiriInit;
         _kunaitext.text = Kunai.ToString();
         _shurikentext.text = Shuriken.ToString();
     }

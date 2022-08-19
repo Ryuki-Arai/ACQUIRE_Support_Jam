@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Debug.Log("Ža");
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1) && _ic.Kunai > 0)
         {
             Instantiate(_bullet, _mazzle.position,Quaternion.identity);
             _ic.Kunai--;
