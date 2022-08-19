@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/hanazono/arasuji.unity
     guid: d1e7fa2b5dcdc514c964265b92b5d335
+  - enabled: 1
+    path: Assets/hanazono/StaffRoll.unity
+    guid: 88002c6f2cb5ada4db00b7643f5f5fe6
   m_configObjects: {}
