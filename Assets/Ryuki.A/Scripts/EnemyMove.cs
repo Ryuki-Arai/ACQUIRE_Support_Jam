@@ -34,4 +34,12 @@ public class EnemyMove : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var tag = collision.gameObject.tag;
+        if (tag == "Katana")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -15,14 +15,24 @@ public class ItemCatch : MonoBehaviour
     int _kunai;
     /// <summary>è— Œ•‚ÌŒ»İ‚Ì”</summary>
     int _shuriken;
+
+    static private ItemCatch _instance = new ItemCatch();
+    static public ItemCatch Instance => _instance;
+    private ItemCatch() { }
+
+    private void Awake()
+    {
+        _instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
-        ItemSingleton.Instance.SetItem(this);
         _pa = GetComponent<PlayerAttack>();
         Kunai = _kunaiInit;
         Shuriken = _shiriInit;
         _kunaitext.text = Kunai.ToString();
         _shurikentext.text = Shuriken.ToString();
+        ModeChange();
     }
     public int Kunai
     {

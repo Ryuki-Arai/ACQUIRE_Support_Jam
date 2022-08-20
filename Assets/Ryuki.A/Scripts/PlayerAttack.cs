@@ -31,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
         _sr = GetComponent<SpriteRenderer>();
         _ic.GetComponent<ItemCatch>();
         _mode = Mode.shuriken;
-        _ic.ModeChange();
+        //_ic.ModeChange();
         _anim = GetComponent<Animator>();
     }
     void Update()
