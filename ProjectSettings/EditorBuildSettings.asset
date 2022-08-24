@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Ryuki.A/Scene/MainGame.unity
     guid: 3181eca7e77764c4cb9e91e640cb125c
   - enabled: 1
+    path: Assets/hiokimiyu/Boss.unity
+    guid: df6650978c1468f43a517f9df08cb533
+  - enabled: 1
     path: Assets/hanazono/GameClearScene.unity
     guid: d3114cc9f97672141a34343d7e0c0149
   - enabled: 1

@@ -16,10 +16,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField, Tooltip("クナイ")] GameObject _kunai;
     [SerializeField, Tooltip("発射位置")] Transform _mazzle;
     [SerializeField, Tooltip("斬撃エフェクト")] GameObject _effect;
-    SpriteRenderer _sr;
-    [SerializeField, Tooltip("プロパティ使用")] ItemCatch _ic;
     Animator _anim;
-    Mode _mode;
+    [SerializeField] Mode _mode;
 
     public Mode Mode
     {
@@ -28,10 +26,6 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-        _sr = GetComponent<SpriteRenderer>();
-        _ic.GetComponent<ItemCatch>();
-        _mode = Mode.shuriken;
-        //_ic.ModeChange();
         _anim = GetComponent<Animator>();
     }
     void Update()
@@ -42,24 +36,24 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("斬");
             
         }
-        else if (Input.GetMouseButtonDown(1) && _ic.Kunai > 0 && _mode == Mode.kunai)
+        else if (Input.GetMouseButtonDown(1) && ItemCatch.Instance.Kunai > 0 && _mode == Mode.kunai)
         {
             _anim.SetTrigger("Kunai");
             Instantiate(_kunai, _mazzle.position,Quaternion.identity);
-            _ic.Kunai--;
+            ItemCatch.Instance.Kunai--;
             
         }
-        else if(Input.GetMouseButtonDown(1) && _ic.Shuriken > 0 && _mode == Mode.shuriken)
+        else if(Input.GetMouseButtonDown(1) && ItemCatch.Instance.Shuriken > 0 && _mode == Mode.shuriken)
         {
             if (_anim) _anim.SetTrigger("Shuriken");
             Instantiate(_shuriken, _mazzle.position, Quaternion.identity);
-            _ic.Shuriken--;
+            ItemCatch.Instance.Shuriken--;
             
         }
         if (Input.GetMouseButtonDown(2))
         {
             _mode = _mode == Mode.shuriken ? Mode.kunai : Mode.shuriken;
-            _ic.ModeChange();
+            ItemCatch.Instance.ModeChange();
         }
     }
 }
